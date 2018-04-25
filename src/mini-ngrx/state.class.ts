@@ -1,12 +1,12 @@
 /**
  * @copyright ngrx
  */
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Action, ActionReducer } from './index';
-import { observeOn } from 'rxjs/operator/observeOn';
-import { queue } from 'rxjs/scheduler/queue';
-import { scan } from 'rxjs/operator/scan';
+import { observeOn } from 'rxjs/operators';
+import { queue } from 'rxjs';
+import { scan } from 'rxjs/operators';
 
 export class MiniState<T> extends BehaviorSubject<T> {
   constructor(

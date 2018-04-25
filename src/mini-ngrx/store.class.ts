@@ -1,12 +1,12 @@
 /**
  * @copyright ngrx
  */
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Observer } from 'rxjs/Observer';
 import { Operator } from 'rxjs/Operator';
-import { distinctUntilChanged } from 'rxjs/operator/distinctUntilChanged';
+import { distinctUntilChanged } from 'rxjs/operators';
 
-import { map } from 'rxjs/operator/map';
+import { map } from 'rxjs/operators';
 import { Action, ActionReducer } from './index';
 
 export class MiniStore<T> extends Observable<T> implements Observer<Action> {
